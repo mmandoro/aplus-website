@@ -101,7 +101,8 @@
   .hero-row{display:flex;align-items:center;gap:50px;justify-content:space-between}
   .hero-inner{max-width:620px;flex:1;min-width:0}
   .hero-visual{flex-shrink:0;width:330px;display:flex;justify-content:center;position:relative}
-  .hero-visual::before{content:"";position:absolute;inset:-20px;background:radial-gradient(circle,rgba(45,225,194,.22),transparent 65%);z-index:0}
+  .hero-visual::before{content:"";position:absolute;inset:-24px;background:radial-gradient(circle,rgba(45,225,194,.26),transparent 65%);z-index:0;animation:pulse 4.5s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:.65;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
   .emblem{position:relative;z-index:1;width:320px;height:320px;border-radius:26px;overflow:hidden;border:1px solid var(--line-2);box-shadow:0 30px 80px -28px rgba(45,225,194,.45)}
   .emblem img{width:100%;height:100%;object-fit:cover;display:block}
   @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
@@ -250,14 +251,22 @@
   .rv{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.2,1)}
   .rv.in{opacity:1;transform:none}
 
-  @media(max-width:980px){.hero-visual{display:none}.hero-inner{max-width:760px}}
+  @media(max-width:980px){
+    .hero-row{flex-direction:column-reverse;align-items:flex-start;gap:30px}
+    .hero-visual{width:auto}
+    .emblem{width:190px;height:190px}
+    .hero-inner{max-width:760px}
+  }
+  @media(max-width:560px){.emblem{width:148px;height:148px}}
   @media(max-width:900px){
     .grid-svc,.grid-port,.grid-step,.grid-price,.grid-blog{grid-template-columns:1fr 1fr}
     .sam{grid-template-columns:1fr;gap:36px}
     .foot-grid{grid-template-columns:1fr 1fr}
+    nav.links{display:none}
+    .menu-btn{display:grid;place-items:center}
+    nav.links.open{display:flex;flex-direction:column;align-items:flex-start;gap:18px;position:absolute;top:70px;left:0;right:0;background:var(--bg-2);border-bottom:1px solid var(--line);padding:20px 22px;z-index:60}
   }
   @media(max-width:640px){
-    nav.links{display:none}.menu-btn{display:grid;place-items:center}
     .grid-svc,.grid-port,.grid-step,.grid-price,.grid-blog,.foot-grid{grid-template-columns:1fr}
     .hero-cta .btn{flex:1}
     .arrows{display:none}
@@ -285,7 +294,7 @@
     </nav>
     <div class="nav-cta">
       <a class="btn btn-primary" data-wa data-wa-msg="Hi A-Plus, I'd like a free demo for my business.">Get free demo</a>
-      <button class="menu-btn" aria-label="Open menu" onclick="document.querySelector('nav.links').scrollIntoView()">
+      <button class="menu-btn" aria-label="Open menu" onclick="document.querySelector('nav.links').classList.toggle('open')">
         <svg viewBox="0 0 24 24" width="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
@@ -578,6 +587,7 @@ document.querySelectorAll('[data-wa]').forEach(el=>{ el.href=waLink(el.dataset.w
 document.querySelectorAll('[data-email]').forEach(el=>el.href="mailto:"+BIZ.email);
 document.querySelectorAll('[data-tel]').forEach(el=>el.href="tel:"+BIZ.phone);
 document.querySelectorAll('[data-gbp]').forEach(el=>el.href=BIZ.gbp);
+document.querySelectorAll('nav.links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav.links').classList.remove('open')));
 
 /* ---- hero emblem ---- */
 if(SITE.heroEmblem){ document.getElementById('hero-emblem').src=SITE.heroEmblem; }
