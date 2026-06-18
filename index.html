@@ -98,7 +98,14 @@
   .slide .veil.g4{background:radial-gradient(900px 600px at 50% 0%,rgba(91,141,239,.18),transparent 60%),linear-gradient(180deg,rgba(8,12,20,.2),var(--bg))}
   .hero-grid{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.45;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(circle at 72% 12%,#000,transparent 72%)}
   .hero .wrap{position:relative;z-index:3;width:100%}
-  .hero-inner{max-width:820px}
+  .hero-row{display:flex;align-items:center;gap:50px;justify-content:space-between}
+  .hero-inner{max-width:620px;flex:1;min-width:0}
+  .hero-visual{flex-shrink:0;width:330px;display:flex;justify-content:center;position:relative}
+  .hero-visual::before{content:"";position:absolute;inset:-20px;background:radial-gradient(circle,rgba(45,225,194,.22),transparent 65%);z-index:0}
+  .emblem{position:relative;z-index:1;width:320px;height:320px;border-radius:26px;overflow:hidden;border:1px solid var(--line-2);box-shadow:0 30px 80px -28px rgba(45,225,194,.45)}
+  .emblem img{width:100%;height:100%;object-fit:cover;display:block}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  .emblem{animation:float 6s ease-in-out infinite}
   .slide-content{display:none}
   .slide-content.show{display:block;animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
   @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
@@ -234,6 +241,7 @@
   .rv{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.2,1)}
   .rv.in{opacity:1;transform:none}
 
+  @media(max-width:980px){.hero-visual{display:none}.hero-inner{max-width:760px}}
   @media(max-width:900px){
     .grid-svc,.grid-port,.grid-step,.grid-price{grid-template-columns:1fr 1fr}
     .sam{grid-template-columns:1fr;gap:36px}
@@ -280,8 +288,13 @@
   <div class="slides" id="slides"></div>
   <div class="hero-grid"></div>
   <div class="wrap">
-    <div class="hero-inner">
-      <div id="hero-content"></div>
+    <div class="hero-row">
+      <div class="hero-inner">
+        <div id="hero-content"></div>
+      </div>
+      <div class="hero-visual">
+        <div class="emblem"><img id="hero-emblem" alt="A-Plus Branding Technologies logo" /></div>
+      </div>
     </div>
   </div>
   <div class="hero-ui">
@@ -477,8 +490,14 @@ const BIZ = {
       Leave "image" as "" to use the built-in placeholder for now.
    ════════════════════════════════════════════════════════════════ */
 const SITE = {
-  /* Your own logo for the top bar. Put a file at assets/brand/logo.png then set it here. */
-  brandLogo: "",  // e.g. "assets/brand/logo.png"
+  /* Big brand logo shown in the hero. Swap to any file in assets/brand/:
+     logo-wireframe-blue.png | logo-crystal-2.png | logo-gold.png | logo-metal.png | logo-silver.jpg | logo-fire.png
+     Set to "" to hide it. */
+  heroEmblem: "assets/brand/logo-wireframe-blue.png",
+
+  /* Optional: a logo for the top nav bar (works best as a wide/transparent PNG).
+     Leave "" to keep the clean A+ text wordmark. */
+  brandLogo: "",
 
   /* HERO carousel — add/remove slides freely. {kicker, title, text, cta, ctaMsg, image, veil} */
   heroSlides: [
@@ -533,6 +552,10 @@ document.querySelectorAll('[data-wa]').forEach(el=>{ el.href=waLink(el.dataset.w
 document.querySelectorAll('[data-email]').forEach(el=>el.href="mailto:"+BIZ.email);
 document.querySelectorAll('[data-tel]').forEach(el=>el.href="tel:"+BIZ.phone);
 document.querySelectorAll('[data-gbp]').forEach(el=>el.href=BIZ.gbp);
+
+/* ---- hero emblem ---- */
+if(SITE.heroEmblem){ document.getElementById('hero-emblem').src=SITE.heroEmblem; }
+else { document.querySelector('.hero-visual').style.display='none'; }
 
 /* ---- brand logo ---- */
 if(SITE.brandLogo){
