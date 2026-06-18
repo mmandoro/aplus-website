@@ -1,55 +1,79 @@
-# Keep working — even when Claude credits run out
+# 🆘 Don't panic — how to keep working when Claude runs out
 
-Your site lives on **GitHub** and auto-publishes through **Netlify**. That means
-**any** way you edit a file and save it to GitHub will go live automatically.
-You are never stuck waiting for one AI.
+## First: your work is 100% safe
+Everything is saved in **GitHub** (https://github.com/mmandoro/aplus-website) and
+auto-publishes through **Netlify**. If Claude stops, **nothing is lost.** Your live
+site keeps running, and you can continue from any computer with any AI.
 
-When Claude says "limit reached, try again in a few hours", switch to one of these.
+## The only rule that matters
+> **Any change saved to GitHub → Netlify publishes it automatically.**
 
----
-
-## Option A — Free, no install (best for quick text/price/wording changes)
-
-1. Go to your repo: https://github.com/mmandoro/aplus-website
-2. Open the file you want to change (usually `index.html`, or a file in `/blog/`).
-3. Click the ✏️ pencil ("Edit this file").
-4. Make your change, scroll down, click **Commit changes**.
-5. Netlify publishes it automatically in ~1 minute. Done.
-
-Need help writing the code? Open **Gemini** (free — gemini.google.com) or
-**ChatGPT** (you already have it), describe the change, paste the file in, ask for
-the edit, then paste the result back into the GitHub editor above.
-
-> Tip: on the repo page, press the `.` (full stop) key to open a full
-> code editor in your browser (github.dev) — same thing, nicer view.
+So *any* tool that can edit a file and save it to GitHub keeps you moving.
+You are never locked to one AI.
 
 ---
 
-## Option B — A second AI coding tool (best for bigger changes)
+# Which AI to use — in priority order
 
-Install one of these, open the `~/aplus-website` folder, and chat to it like you do
-with Claude. They edit the files; you then commit + push (or they do it for you).
+## 🥇 Plan A — ChatGPT or Gemini + GitHub (free / you already have it, nothing to install)
+Best when Claude is out and you just want to keep going *now*.
 
-- **Cursor** — cursor.com — has a free tier and cheaper models. Closest feel to Claude.
-- **Windsurf** — has a free tier.
-- **GitHub Copilot** in VS Code — about $10/month.
+1. Open **ChatGPT** (chatgpt.com — you have it) or **Gemini** (gemini.google.com — free).
+2. Paste the **Handoff Prompt** below so it understands the project.
+3. Tell it what you want changed. Ask it to "give me the full updated file."
+4. Go to https://github.com/mmandoro/aplus-website, open the file (usually `index.html`),
+   click the ✏️ pencil, paste the new version, click **Commit changes**.
+5. Netlify publishes in ~1 minute. Done.
 
-All of them deploy the same way: save → commit to GitHub → Netlify publishes.
+> Tip: on the repo page press the `.` key to open a full editor in your browser.
 
----
+## 🥈 Plan B — Cursor (free tier — closest feeling to Claude)
+Best when you want the AI to edit the files for you, like Claude does.
 
-## Option C — No limits at all (pay only for what you use)
+1. Download **Cursor** (cursor.com) — free tier is fine to start.
+2. Open the folder `~/aplus-website`.
+3. Paste the **Handoff Prompt**, then just chat. It edits the files directly.
+4. Commit + push from inside Cursor (it walks you through it) → Netlify publishes.
 
-Subscription plans have time-based caps. **Pay-as-you-go** does not.
+Alternatives that work the same way: **Windsurf** (free tier), **GitHub Copilot** in VS Code (~$10/mo).
 
+## 🥉 Plan C — No limits, ever (pay only for what you use)
+Best when you keep hitting time-based caps and never want to wait again.
+
+- **OpenRouter** (openrouter.ai) — one login, access to very cheap models
+  (Gemini Flash, DeepSeek). Plug the key into Cursor. Cents per session.
 - **Anthropic Console** (console.anthropic.com) — Claude, billed per use, no daily wall.
-- **OpenRouter** (openrouter.ai) — one key, access to many cheap models
-  (Gemini Flash, DeepSeek, etc.). Very cheap. Plug it into Cursor or similar.
 
 ---
 
-## The golden rule
-Whatever tool you use, the finish line is always the same:
-**save the change to GitHub → Netlify publishes it.**
-So you can hop between Claude, Gemini, ChatGPT, Cursor — whatever is available —
-without ever losing progress.
+# 📋 Handoff Prompt — paste this into ANY new AI first
+Copy everything between the lines so the new AI instantly understands your project:
+
+---
+I'm continuing work on my business website. Here's the context:
+
+- Business: **A-Plus Branding Technologies** — web design + AI receptionists, Cape Town.
+- The whole site is plain **HTML/CSS/JavaScript** (no build step, no frameworks).
+- Main file: **index.html** (one file). Blog pages live in the **/blog/** folder.
+  Shared files: **assets/blog.css** (blog styling) and **assets/posts.js** (the blog post list).
+- Images are in **assets/** (brand logos, hero, logos, portfolio).
+- Editable settings are at the BOTTOM of index.html in two objects:
+  **BIZ** (phone, WhatsApp, email, Google link) and **SITE** (hero slides, logos, portfolio, hero emblem).
+- Design: dark theme, teal (#2DE1C2) + blue (#5B8DEF) accents.
+  Fonts: Bricolage Grotesque (headings) + Hanken Grotesk (body). Keep this style.
+- Hosting: the repo is on GitHub (mmandoro/aplus-website) and auto-deploys to **Netlify**.
+  To publish a change, I just commit it to GitHub.
+
+Please help me make this change: [DESCRIBE WHAT YOU WANT].
+Give me the complete updated file so I can paste it into GitHub.
+---
+
+---
+
+# Cheat sheet — making any change
+1. Decide the change.
+2. Get the code from whichever AI is available (use the Handoff Prompt).
+3. Save it to GitHub (pencil → commit, or your editor pushes it).
+4. Wait ~1 minute. Netlify publishes it. Refresh your site.
+
+That's it. Claude, ChatGPT, Gemini, Cursor — mix and match. You never lose progress.
