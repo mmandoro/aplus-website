@@ -235,6 +235,11 @@
   #sam-fab svg{width:28px;height:28px}
   #sam-fab{overflow:hidden}
   #sam-fab img{width:100%;height:100%;object-fit:cover;display:block}
+  #sam-teaser{position:fixed;right:20px;bottom:92px;z-index:80;display:none;align-items:center;gap:11px;max-width:248px;background:var(--bg-2);border:1px solid var(--line-2);border-radius:16px;border-bottom-right-radius:5px;padding:11px 13px;box-shadow:0 16px 44px -18px rgba(0,0,0,.75);cursor:pointer}
+  #sam-teaser.show{display:flex;animation:rise .4s ease both}
+  #sam-teaser img{width:34px;height:34px;border-radius:50%;object-fit:cover;flex-shrink:0}
+  #sam-teaser span{font-size:13px;line-height:1.35;color:var(--ink)}
+  #sam-teaser>button{position:absolute;top:-9px;right:-9px;width:22px;height:22px;border-radius:50%;background:var(--bg-3);border:1px solid var(--line-2);color:var(--ink-soft);cursor:pointer;font-size:14px;line-height:1;display:grid;place-items:center;padding:0}
   .chatdemo .av,#sam-panel .top .av{overflow:hidden}
   .chatdemo .av img,#sam-panel .top .av img{width:100%;height:100%;object-fit:cover;display:block}
   #sam-panel{position:fixed;right:20px;bottom:94px;z-index:81;width:min(360px,calc(100vw - 40px));background:var(--bg-2);border:1px solid var(--line-2);border-radius:20px;overflow:hidden;box-shadow:0 30px 90px -30px rgba(0,0,0,.9);transform:translateY(16px) scale(.98);opacity:0;pointer-events:none;transition:.22s ease}
@@ -507,6 +512,11 @@
   </div>
 </footer>
 
+<div id="sam-teaser" onclick="openSamFromTeaser()">
+  <img src="assets/brand/sam-photo.jpg" alt="Sam" />
+  <span>Hi 👋 Looking for more customers? Tap to chat with me.</span>
+  <button aria-label="Dismiss" onclick="event.stopPropagation();hideTeaser()">×</button>
+</div>
 <button id="sam-fab" aria-label="Chat with Sam" onclick="toggleSam()">
   <img src="assets/brand/sam-photo.jpg" alt="Chat with Sam" />
 </button>
@@ -710,7 +720,7 @@ const panel=document.getElementById('sam-panel'),msgs=document.getElementById('s
 let samStarted=false, samHistory=[], samBusy=false;
 const QUICK=[["I want a website"],["Tell me about the AI receptionist"],["What does it cost?"],["Book a free demo"]];
 function toggleSam(){ panel.classList.contains('open')?panel.classList.remove('open'):openSam(); }
-function openSam(){ panel.classList.add('open'); if(!samStarted){samStarted=true; bot("Hi! 👋 I'm Sam from A-Plus. What can I help your business with today?"); renderQuick();} }
+function openSam(){ var t=document.getElementById('sam-teaser'); if(t)t.classList.remove('show'); panel.classList.add('open'); if(!samStarted){samStarted=true; bot("Hi! 👋 I'm Sam from A-Plus. What can I help your business with today?"); renderQuick();} }
 function down(){ msgs.scrollTop=msgs.scrollHeight; }
 function bot(t){ const d=document.createElement('div');d.className='bub bot';d.textContent=t;msgs.appendChild(d);down();return d; }
 function user(t){ const d=document.createElement('div');d.className='bub user';d.textContent=t;msgs.appendChild(d);down(); }
@@ -733,8 +743,11 @@ async function sendToSam(text){
   samBusy=false; renderQuick();
 }
 function samType(e){ e.preventDefault(); const inp=document.getElementById('sam-in'),txt=inp.value.trim(); if(!txt)return; inp.value=''; sendToSam(txt); }
-/* Proactive greeting: open Sam 4s after arrival, once per visit */
-if(!sessionStorage.getItem('samGreeted')){ setTimeout(()=>{ if(!samStarted){ openSam(); sessionStorage.setItem('samGreeted','1'); } }, 4000); }
+/* Proactive greeting: small teaser bubble 4s after arrival, once per visit */
+function showTeaser(){ const t=document.getElementById('sam-teaser'); if(t&&!samStarted)t.classList.add('show'); }
+function hideTeaser(){ const t=document.getElementById('sam-teaser'); if(t)t.classList.remove('show'); sessionStorage.setItem('samGreeted','1'); }
+function openSamFromTeaser(){ hideTeaser(); openSam(); }
+if(!sessionStorage.getItem('samGreeted')){ setTimeout(showTeaser, 4000); }
 </script>
 </body>
 </html>
