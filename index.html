@@ -233,6 +233,10 @@
   #sam-fab{position:fixed;right:20px;bottom:20px;z-index:80;width:62px;height:62px;border-radius:50%;background:var(--grad);color:var(--accent-ink);border:none;cursor:pointer;display:grid;place-items:center;box-shadow:0 14px 40px -10px rgba(45,225,194,.6);transition:.25s}
   #sam-fab:hover{transform:scale(1.06)}
   #sam-fab svg{width:28px;height:28px}
+  #sam-fab{overflow:hidden}
+  #sam-fab img{width:100%;height:100%;object-fit:cover;display:block}
+  .chatdemo .av,#sam-panel .top .av{overflow:hidden}
+  .chatdemo .av img,#sam-panel .top .av img{width:100%;height:100%;object-fit:cover;display:block}
   #sam-panel{position:fixed;right:20px;bottom:94px;z-index:81;width:min(360px,calc(100vw - 40px));background:var(--bg-2);border:1px solid var(--line-2);border-radius:20px;overflow:hidden;box-shadow:0 30px 90px -30px rgba(0,0,0,.9);transform:translateY(16px) scale(.98);opacity:0;pointer-events:none;transition:.22s ease}
   #sam-panel.open{transform:none;opacity:1;pointer-events:auto}
   #sam-panel .top{display:flex;align-items:center;gap:11px;padding:16px 18px;background:var(--bg-3);border-bottom:1px solid var(--line)}
@@ -385,7 +389,7 @@
       <a class="btn btn-primary" onclick="openSam()">Chat with Sam now</a>
     </div>
     <div class="chatdemo rv" aria-hidden="true">
-      <div class="ch-top"><div class="av">S</div><div><b>Sam</b><small>Online now</small></div></div>
+      <div class="ch-top"><div class="av"><img src="assets/brand/sam-avatar.svg" alt="Sam" /></div><div><b>Sam</b><small>Online now</small></div></div>
       <div class="ch-body">
         <div class="bub bot">Hi! 👋 I'm Sam, the AI receptionist from A-Plus. What kind of business do you run?</div>
         <div class="bub user">I run a plumbing business in Table View</div>
@@ -504,10 +508,10 @@
 </footer>
 
 <button id="sam-fab" aria-label="Chat with Sam" onclick="toggleSam()">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-9 8.5 8.5 8.5 0 01-4-1L3 20l1-3.5A8.38 8.38 0 013 11.5 8.5 8.5 0 0112 3a8.5 8.5 0 019 8.5z"/></svg>
+  <img src="assets/brand/sam-avatar.svg" alt="Chat with Sam" />
 </button>
 <div id="sam-panel" role="dialog" aria-label="Chat with Sam">
-  <div class="top"><div class="av">S</div><div><b>Sam</b><small>AI receptionist · online</small></div><button class="x" aria-label="Close chat" onclick="toggleSam()">×</button></div>
+  <div class="top"><div class="av"><img src="assets/brand/sam-avatar.svg" alt="Sam" /></div><div><b>Sam</b><small>AI receptionist · online</small></div><button class="x" aria-label="Close chat" onclick="toggleSam()">×</button></div>
   <div id="sam-msgs"></div>
   <div class="qr" id="sam-qr"></div>
   <form class="sam-input" onsubmit="samType(event)">

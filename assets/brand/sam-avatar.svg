@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Sam, A-Plus AI receptionist">
+  <defs>
+    <clipPath id="sc"><circle cx="100" cy="100" r="100"/></clipPath>
+    <linearGradient id="sbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#43D9C2"/>
+      <stop offset="1" stop-color="#5B8DEF"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#sc)">
+    <rect width="200" height="200" fill="url(#sbg)"/>
+    <path d="M46 104 C46 52 70 34 100 34 C130 34 154 52 154 104 C154 136 150 158 144 168 L56 168 C50 158 46 136 46 104 Z" fill="#241B2E"/>
+    <rect x="89" y="118" width="22" height="30" rx="10" fill="#9C5E3B"/>
+    <ellipse cx="100" cy="94" rx="36" ry="43" fill="#B5784F"/>
+    <circle cx="64" cy="98" r="8" fill="#B5784F"/>
+    <circle cx="136" cy="98" r="8" fill="#B5784F"/>
+    <ellipse cx="78" cy="108" rx="8" ry="4.5" fill="#E0855F" opacity="0.35"/>
+    <ellipse cx="122" cy="108" rx="8" ry="4.5" fill="#E0855F" opacity="0.35"/>
+    <path d="M78 80 Q86 76 94 80" stroke="#241B2E" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <path d="M106 80 Q114 76 122 80" stroke="#241B2E" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <ellipse cx="85" cy="90" rx="4.6" ry="6" fill="#2A2440"/>
+    <ellipse cx="115" cy="90" rx="4.6" ry="6" fill="#2A2440"/>
+    <circle cx="86.6" cy="88" r="1.4" fill="#fff"/>
+    <circle cx="116.6" cy="88" r="1.4" fill="#fff"/>
+    <path d="M100 98 L97 107 Q100 109 103 107" stroke="#9C5E3B" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M88 115 Q100 125 112 115" stroke="#7A3F30" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M62 76 C64 48 82 42 100 42 C118 42 136 48 138 76 C122 60 112 58 100 58 C86 58 76 62 62 76 Z" fill="#241B2E"/>
+    <path d="M38 200 L38 178 C38 158 64 147 100 147 C136 147 162 158 162 178 L162 200 Z" fill="#1A2740"/>
+    <path d="M88 147 L100 163 L112 147 Z" fill="#EAF1FA"/>
+    <path d="M88 147 L100 161 L94 147 Z" fill="#11203a"/>
+    <path d="M112 147 L100 161 L106 147 Z" fill="#11203a"/>
+    <path d="M60 96 C60 46 140 46 140 96" stroke="#23232b" stroke-width="6" fill="none"/>
+    <circle cx="60" cy="98" r="11" fill="#23232b"/>
+    <circle cx="60" cy="98" r="5.5" fill="#2DE1C2"/>
+    <circle cx="140" cy="98" r="11" fill="#23232b"/>
+    <circle cx="140" cy="98" r="5.5" fill="#2DE1C2"/>
+    <path d="M60 109 C57 128 74 134 87 124" stroke="#23232b" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="88" cy="123" r="4" fill="#2DE1C2"/>
+  </g>
+</svg>
