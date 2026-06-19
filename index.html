@@ -235,6 +235,11 @@
   #sam-fab svg{width:28px;height:28px}
   #sam-fab{overflow:hidden}
   #sam-fab img{width:100%;height:100%;object-fit:cover;display:block}
+  #sam-bubble{position:fixed;right:90px;bottom:26px;z-index:80;background:var(--bg-2);border:1px solid var(--line-2);border-radius:14px;padding:11px 14px 11px 16px;font-size:14px;color:var(--ink);box-shadow:0 8px 32px -8px rgba(0,0,0,.55);white-space:nowrap;cursor:pointer;display:flex;align-items:center;gap:8px;opacity:0;transform:translateX(10px);pointer-events:none;transition:.3s ease}
+  #sam-bubble.show{opacity:1;transform:none;pointer-events:auto}
+  #sam-bubble::after{content:"";position:absolute;right:-7px;top:50%;transform:translateY(-50%);border:7px solid transparent;border-right:none;border-left-color:var(--line-2)}
+  #sam-bubble::before{content:"";position:absolute;right:-6px;top:50%;transform:translateY(-50%);border:6px solid transparent;border-right:none;border-left-color:var(--bg-2);z-index:1}
+  #sam-bubble .bx{background:none;border:none;color:var(--ink-soft);cursor:pointer;font-size:18px;line-height:1;padding:0 2px;flex-shrink:0}
   .chatdemo .av,#sam-panel .top .av{overflow:hidden}
   .chatdemo .av img,#sam-panel .top .av img{width:100%;height:100%;object-fit:cover;display:block}
   #sam-panel{position:fixed;right:20px;bottom:94px;z-index:81;width:min(360px,calc(100vw - 40px));background:var(--bg-2);border:1px solid var(--line-2);border-radius:20px;overflow:hidden;box-shadow:0 30px 90px -30px rgba(0,0,0,.9);transform:translateY(16px) scale(.98);opacity:0;pointer-events:none;transition:.22s ease}
@@ -507,6 +512,10 @@
   </div>
 </footer>
 
+<div id="sam-bubble" role="button" aria-label="Chat with Sam" onclick="openSam();dismissBubble()">
+  👋 Hi! I'm Sam — need a hand?
+  <button class="bx" aria-label="Dismiss" onclick="event.stopPropagation();dismissBubble()">×</button>
+</div>
 <button id="sam-fab" aria-label="Chat with Sam" onclick="toggleSam()">
   <img src="assets/brand/sam-photo.jpg" alt="Chat with Sam" />
 </button>
@@ -709,8 +718,9 @@ const SAM_WEBHOOK="https://marlextreme.app.n8n.cloud/webhook/b6b1acf6-5fff-42df-
 const panel=document.getElementById('sam-panel'),msgs=document.getElementById('sam-msgs'),qrBox=document.getElementById('sam-qr');
 let samStarted=false, samHistory=[], samBusy=false;
 const QUICK=[["I want a website"],["Tell me about the AI receptionist"],["What does it cost?"],["Book a free demo"]];
+function dismissBubble(){ const b=document.getElementById('sam-bubble'); if(b){b.classList.remove('show');setTimeout(()=>{b.style.display='none';},300);} }
 function toggleSam(){ panel.classList.contains('open')?panel.classList.remove('open'):openSam(); }
-function openSam(){ panel.classList.add('open'); if(!samStarted){samStarted=true; bot("Hi! 👋 I'm Sam from A-Plus. What can I help your business with today?"); renderQuick();} }
+function openSam(){ dismissBubble(); panel.classList.add('open'); sessionStorage.setItem('samGreeted','1'); if(!samStarted){samStarted=true; bot("Hi! 👋 I'm Sam from A-Plus. What can I help your business with today?"); renderQuick();} }
 function down(){ msgs.scrollTop=msgs.scrollHeight; }
 function bot(t){ const d=document.createElement('div');d.className='bub bot';d.textContent=t;msgs.appendChild(d);down();return d; }
 function user(t){ const d=document.createElement('div');d.className='bub user';d.textContent=t;msgs.appendChild(d);down(); }
@@ -733,8 +743,8 @@ async function sendToSam(text){
   samBusy=false; renderQuick();
 }
 function samType(e){ e.preventDefault(); const inp=document.getElementById('sam-in'),txt=inp.value.trim(); if(!txt)return; inp.value=''; sendToSam(txt); }
-/* Proactive greeting: open Sam 4s after arrival, once per visit */
-if(!sessionStorage.getItem('samGreeted')){ setTimeout(()=>{ if(!samStarted){ openSam(); sessionStorage.setItem('samGreeted','1'); } }, 4000); }
+/* Proactive greeting: show small bubble 3s after arrival, once per visit */
+if(!sessionStorage.getItem('samGreeted')){ setTimeout(()=>{ if(!samStarted){ const b=document.getElementById('sam-bubble'); if(b) b.classList.add('show'); } }, 3000); }
 </script>
 </body>
 </html>
