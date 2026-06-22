@@ -7,7 +7,6 @@
 <meta name="description" content="A-Plus Branding Technologies builds conversion-focused websites with 24/7 AI receptionists and automation for businesses in Parklands, Table View, Blouberg, Milnerton and across Cape Town. See a free demo before you pay." />
 <meta name="theme-color" content="#FFFFFF" />
 <link rel="canonical" href="https://aplusbrandingtechnologies.com/" />
-
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Websites & AI receptionists that turn searches into customers" />
 <meta property="og:description" content="Conversion-focused websites, 24/7 AI receptionists and automation for Cape Town businesses. See a free demo first." />
@@ -19,21 +18,19 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "A-Plus Branding Technologies",
-  "image": "https://aplusbrandingtechnologies.com/og.jpg",
   "url": "https://aplusbrandingtechnologies.com/",
   "telephone": "+27612017287",
   "email": "info@aplusbrandingtechnologies.com",
   "priceRange": "RR",
   "description": "Conversion-focused websites, AI receptionists and business automation for local businesses in Cape Town.",
   "address": { "@type": "PostalAddress", "streetAddress": "7 Blaauwberg Road", "addressLocality": "Blouberg", "addressRegion": "Western Cape", "addressCountry": "ZA" },
-  "areaServed": ["Parklands", "Table View", "Blouberg", "Milnerton", "Cape Town"],
   "sameAs": ["https://share.google/vMiDCUCj3IaCJYwOH","https://www.facebook.com/aplusbrandingtechnologies","https://www.instagram.com/aplusbranding/","https://x.com/aplusbranding1","https://www.youtube.com/@aplusbrandingtech"]
 }
 </script>
@@ -336,14 +333,13 @@
 </head>
 <body>
 
-<header class="nav">
+<!-- NAV -->
+<header class="nav" id="nav">
   <div class="wrap nav-in">
     <a class="logo" href="#top">
-      <img class="brand" id="brand-img" alt="A-Plus Branding Technologies" />
-      <span class="mark" id="brand-mark">A+</span>
-      <span id="brand-name">A-Plus<small>Branding Technologies</small></span>
+      <img src="/assets/brand/logo-transparent.png" alt="A-Plus Branding Technologies" class="logo-img" />
     </a>
-    <nav class="links">
+    <nav class="links" id="nav-links">
       <a href="#services">Services</a>
       <a href="#work">Our work</a>
       <a href="#sam">AI Receptionist</a>
@@ -361,30 +357,82 @@
 </header>
 
 <main id="top">
-<!-- HERO CAROUSEL -->
-<section class="hero" aria-roledescription="carousel" aria-label="Highlights">
-  <div class="slides" id="slides"></div>
-  <div class="hero-grid"></div>
-  <div class="wrap">
-    <div class="hero-row">
-      <div class="hero-inner">
-        <div id="hero-content"></div>
-      </div>
-      <div class="hero-visual">
-        <div class="emblem"><img id="hero-emblem" alt="A-Plus Branding Technologies logo" /></div>
-      </div>
-    </div>
+
+<!-- HERO -->
+<section class="hero dk">
+  <div class="hero-bg">
+    <div class="hero-bg-img"></div>
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+    <div class="hero-grid-overlay"></div>
   </div>
-  <div class="hero-ui">
-    <div class="wrap">
-      <div class="dots" id="dots"></div>
-      <div class="arrows">
-        <button id="prev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
-        <button id="next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+  <div class="wrap">
+    <div class="hero-layout">
+      <div class="hero-inner">
+        <div class="label hero-label">AI Automation &amp; Custom Software · Cape Town</div>
+        <h1>Build AI-powered systems that save your business time.</h1>
+        <p class="lead">Custom software, websites, workflow automation and AI integration for growing businesses.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" data-wa data-wa-msg="Hi A-Plus, I'd like to book a discovery call.">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"/><path d="M14 2v6h6"/><path d="M9 12h6M9 16h4"/></svg>
+            Book a Discovery Call
+          </a>
+          <a class="btn btn-outline" href="#projects">See Our Work</a>
+        </div>
+        <div class="hero-metrics">
+          <div class="hero-metric">
+            <div class="val">50+</div>
+            <div class="desc">Projects delivered</div>
+          </div>
+          <div class="hero-metric">
+            <div class="val">80%</div>
+            <div class="desc">Manual work reduced</div>
+          </div>
+          <div class="hero-metric">
+            <div class="val">24/7</div>
+            <div class="desc">AI-powered support</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual rv">
+        <div class="dashboard-card">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=720&q=80&auto=format&fit=crop" alt="AI dashboard interface" />
+        </div>
+        <div class="dash-badge">
+          <div class="dot"></div>
+          <div>
+            <span>AI Automation Live</span>
+            <small>Processing 247 tasks today</small>
+          </div>
+        </div>
+        <div class="dash-badge-2">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <div>
+            <span style="font-size:13px;font-weight:600">98% Uptime</span>
+            <small style="font-size:11px;color:var(--text-muted);display:block">Last 90 days</small>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- SOCIAL PROOF -->
+<div class="proof-bar rv">
+  <div class="wrap">
+    <div class="proof-grid">
+      <div class="proof-stat"><div class="num accent-text">50+</div><div class="lbl">Projects completed</div></div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat"><div class="num accent-text">80%</div><div class="lbl">Avg manual work eliminated</div></div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat"><div class="num accent-text">24/7</div><div class="lbl">AI-powered availability</div></div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat"><div class="num accent-text">3×</div><div class="lbl">Avg lead response speed</div></div>
+      <div class="proof-divider"></div>
+      <div class="proof-stat"><div class="num accent-text">100%</div><div class="lbl">SME focused</div></div>
+    </div>
+  </div>
+</div>
 
 <!-- STATS BAR -->
 <section class="stats-sec">
@@ -402,7 +450,7 @@
 <section class="marquee-sec">
   <div class="wrap"><p class="lbl">Trusted by local businesses across Cape Town &amp; beyond</p></div>
   <div class="marquee"><div class="track" id="logo-track"></div></div>
-</section>
+</div>
 
 <!-- SERVICES · THREE PILLARS -->
 <section class="block" id="services">
@@ -450,16 +498,18 @@
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section class="block" id="work" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<!-- PROJECTS -->
+<section class="s alt" id="projects">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="kicker">Our work</span>
-      <h2>Sites that win customers for real businesses.</h2>
-      <p class="lead">Business owners buy what they can see. Here's a taste of what we build — yours could be next.</p>
+      <span class="label">Featured projects</span>
+      <h2>Work that delivers real outcomes.</h2>
+      <p class="lead">Every project starts with a problem. Here's how we solve them — and what happens after.</p>
     </div>
-    <div class="grid-port" id="portfolio"></div>
-    <div class="demo-cta rv"><a class="btn btn-primary" data-wa data-wa-msg="Hi A-Plus, can you build a free demo for my business?">Get my free demo</a></div>
+    <div class="projects-grid" id="portfolio"></div>
+    <div style="text-align:center;margin-top:40px" class="rv">
+      <a class="btn btn-primary" data-wa data-wa-msg="Hi A-Plus, I'd like to discuss a project for my business.">Start your project</a>
+    </div>
   </div>
 </section>
 
@@ -467,44 +517,66 @@
 <section class="block" id="sam">
   <div class="wrap sam">
     <div class="rv">
-      <span class="kicker">Your secret weapon</span>
+      <span class="label">Your AI advantage</span>
       <h2 style="margin:16px 0 18px">Meet Michelle, your 24/7 AI receptionist.</h2>
-      <p class="lead">While other businesses miss calls and messages after hours, Michelle answers every customer instantly — day or night — and turns them into booked jobs.</p>
-      <ul>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Answers customer questions instantly, 24/7</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Qualifies leads and captures their details</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Books appointments and hands off to WhatsApp</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Never sleeps, never takes a day off</li>
+      <p class="lead">While other businesses miss calls and messages after hours, Michelle answers every customer instantly — day or night — turning enquiries into booked jobs.</p>
+      <ul class="sam-features">
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Answers customer questions instantly, 24/7</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Qualifies leads and captures contact details</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Books appointments and hands off to WhatsApp</li>
+        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>Learns your business and improves over time</li>
       </ul>
-      <a class="btn btn-primary" onclick="openMichelle()">Chat with Michelle now</a>
+      <a class="btn btn-primary" onclick="openMichelle()">Chat with Michelle now →</a>
     </div>
     <div class="chatdemo rv" aria-hidden="true">
-      <div class="ch-top"><div class="av"><img src="assets/brand/sam-photo.jpg" alt="Michelle" /></div><div><b>Michelle</b><small>Online now</small></div></div>
+      <div class="ch-top">
+        <div class="av"><img src="assets/brand/sam-photo.jpg" alt="Michelle" /></div>
+        <div class="inf"><b>Michelle</b><small>Online now</small></div>
+      </div>
       <div class="ch-body">
-        <div class="bub bot">Hi! 👋 I'm Michelle, the AI receptionist from A-Plus. What kind of business do you run?</div>
-        <div class="bub user">I run a plumbing business in Table View</div>
-        <div class="bub bot">Perfect. I can build you a site that takes bookings 24/7 and answers customers instantly. Want me to send a free demo?</div>
-        <div class="bub user">Yes please!</div>
-        <div class="bub bot">Done ✅ Tap the chat button anytime — I'm always here.</div>
+        <div class="bub bot">Hi! 👋 I'm Michelle from A-Plus. I help businesses save time with AI. What do you do?</div>
+        <div class="bub user">I run a plumbing business in Cape Town</div>
+        <div class="bub bot">Perfect — I can set up an AI system that answers your leads 24/7, books jobs and follows up automatically. Want to see a demo?</div>
+        <div class="bub user">Yes, how does it work?</div>
+        <div class="bub bot">I'll walk you through it right now. Tap the demo button or just keep chatting — I'm always here ✅</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- STEPS -->
-<section class="block" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<!-- PROCESS -->
+<section class="s alt">
   <div class="wrap">
-    <div class="sec-head rv"><span class="kicker">How it works</span><h2>From invisible to fully booked in three steps.</h2></div>
-    <div class="grid-step">
-      <div class="step rv"><div class="num">01</div><h3>Free demo</h3><p>Tell us about your business and we build a free demo of your website so you can see it before you pay a cent.</p></div>
-      <div class="step rv"><div class="num">02</div><h3>Go live</h3><p>We launch your site, set up Michelle your AI receptionist, and fix your Google profile so locals can find you.</p></div>
-      <div class="step rv"><div class="num">03</div><h3>Get customers</h3><p>Your site, Google and WhatsApp work together to bring in calls, messages and bookings — automatically.</p></div>
+    <div class="sec-head rv" style="text-align:center;margin-left:auto;margin-right:auto;max-width:52ch">
+      <span class="label" style="justify-content:center">How it works</span>
+      <h2>From first call to live system in days.</h2>
+      <p class="lead" style="margin:0 auto">No lengthy contracts, no bloated agencies. Just a focused process that gets results fast.</p>
+    </div>
+    <div class="process-grid rv">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <h3>Discovery Call</h3>
+        <p>We learn about your business, your biggest time drains and the outcomes you want. Free, no obligation.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <h3>Design &amp; Build</h3>
+        <p>We design and build your system — website, automation or AI tool — and show you a live demo before launch.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <h3>Launch &amp; Scale</h3>
+        <p>We go live, monitor performance and optimise continuously so your system keeps improving month after month.</p>
+      </div>
+    </div>
+    <div class="process-cta rv">
+      <a class="btn btn-primary" data-wa data-wa-msg="Hi A-Plus, I'd like to book a discovery call to learn more.">Book your free discovery call</a>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="block" id="pricing">
+<!-- TESTIMONIALS -->
+<section class="s" id="testimonials">
   <div class="wrap">
     <div class="sec-head rv"><span class="kicker">Simple pricing</span><h2>Plans that pay for themselves.</h2><p class="lead">Start with a website, add an AI receptionist and let it bring in customers month after month. Cancel anytime.</p></div>
     <div class="grid-price">
@@ -528,18 +600,21 @@
         </ul>
         <a class="btn btn-primary" data-wa data-wa-msg="Hi A-Plus, I'm interested in the Growth plan.">Get started</a>
       </div>
-      <div class="price rv">
-        <h3>Pro · Done-for-you</h3><div class="amt">R5 000+ <small>once-off</small></div><div class="sub">+ from R499/mo</div>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Everything in Growth</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Ongoing local SEO</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Social media management</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> WhatsApp automation</li>
-        </ul>
-        <a class="btn btn-ghost" data-wa data-wa-msg="Hi A-Plus, I'm interested in the Pro done-for-you plan.">Get started</a>
+      <div class="testi-card rv">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <blockquote>"Our Google ranking jumped from page 3 to position 2 for our main keyword. The whole team at A-Plus is responsive, professional and genuinely care about results."</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80&auto=format&fit=crop&crop=face" alt="Client" /></div>
+          <div><div class="testi-name">Sipho Dlamini</div><div class="testi-role">Digitech Solutions</div></div>
+        </div>
       </div>
     </div>
-    <p class="price-note">Prices are starting guides — every business is different. Chat with us for an exact quote.</p>
   </div>
 </section>
 
@@ -582,18 +657,63 @@
 <!-- INSIGHTS / BLOG -->
 <section class="block" id="insights">
   <div class="wrap">
-    <div class="sec-head rv">
-      <span class="kicker">Insights</span>
-      <h2>Tips to help your business get found.</h2>
-      <p class="lead">Practical advice on getting more customers online — websites, Google, AI and local SEO for Cape Town businesses.</p>
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:64px;align-items:start">
+      <div class="rv">
+        <span class="label">FAQ</span>
+        <h2 style="margin:16px 0 16px">Common questions.</h2>
+        <p style="color:var(--text-muted);font-size:15px;line-height:1.7">Can't find what you're looking for? Chat with us on WhatsApp.</p>
+        <a class="btn btn-outline" style="margin-top:24px" data-wa data-wa-msg="Hi A-Plus, I have a question.">Ask us anything</a>
+      </div>
+      <div class="faq-list rv">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What kinds of businesses do you work with?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">We primarily work with SMEs — small and medium-sized businesses — across a range of industries including trades, professional services, retail, tech startups and hospitality. If you're a growing business that needs better digital systems, we can help.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            How long does a typical project take?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Most websites go live within 5–10 business days. AI automation setups typically take 1–2 weeks depending on complexity. Custom software projects vary — we'll give you a clear timeline after the discovery call.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What is the AI receptionist and how does it work?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Michelle is an AI assistant trained on your business information. She answers customer questions on your website and WhatsApp, qualifies leads, captures contact details and books appointments — all 24/7 without any human intervention. She connects to your WhatsApp for seamless handoff.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Do I need technical knowledge to use your systems?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Not at all. We handle all the technical setup and train you on how to use your new systems. Our clients are business owners, not developers. We make sure everything is intuitive and well-documented.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What does it cost?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Websites start from R2 500 once-off with hosting from R199/month. AI receptionist setup starts from R4 500 with a monthly retainer. Custom software is quoted per project. Book a discovery call and we'll give you a clear, tailored quote — no hidden fees.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Can I see a demo before committing?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M12 5v14M5 12h14"/></svg></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Absolutely — we build a free demo of your website or system before you pay anything. You get to see exactly what you're getting before making any commitment. Chat with Michelle below or book a discovery call to get started.</div></div>
+        </div>
+      </div>
     </div>
-    <div class="grid-blog" id="blog-list"></div>
-    <div class="demo-cta rv"><a class="btn btn-ghost" href="blog/index.html">Read the blog →</a></div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="block" id="contact">
+<!-- CONTACT CTA -->
+<section class="s" id="contact">
   <div class="wrap">
     <div class="cta rv">
       <h2>Ready to turn your website into a sales machine?</h2>
@@ -608,9 +728,11 @@
     </div>
   </div>
 </section>
+
 </main>
 
-<footer>
+<!-- FOOTER -->
+<footer class="dk">
   <div class="wrap">
     <div class="foot-grid">
       <div>
@@ -619,7 +741,7 @@
         <div class="socials">
           <a href="https://www.facebook.com/aplusbrandingtechnologies" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.01 1.79-4.68 4.53-4.68 1.31 0 2.69.24 2.69.24v2.96H15.83c-1.49 0-1.96.93-1.96 1.87v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a>
           <a href="https://www.instagram.com/aplusbranding/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="https://x.com/aplusbranding1" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg></a>
+          <a href="https://x.com/aplusbranding1" target="_blank" rel="noopener" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg></a>
           <a href="https://www.youtube.com/@aplusbrandingtech" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
         </div>
       </div>
@@ -633,16 +755,21 @@
   </div>
 </footer>
 
+<!-- MICHELLE CHAT WIDGET -->
 <div id="sam-teaser" onclick="openMichelleFromTeaser()">
   <img src="assets/brand/sam-photo.jpg" alt="Michelle" />
-  <span>Hi 👋 Looking for more customers? Tap to chat with me.</span>
+  <span>Hi 👋 Want to save time with AI? Chat with me.</span>
   <button aria-label="Dismiss" onclick="event.stopPropagation();hideTeaser()">×</button>
 </div>
 <button id="sam-fab" aria-label="Chat with Michelle" onclick="toggleMichelle()">
   <img src="assets/brand/sam-photo.jpg" alt="Chat with Michelle" />
 </button>
 <div id="sam-panel" role="dialog" aria-label="Chat with Michelle">
-  <div class="top"><div class="av"><img src="assets/brand/sam-photo.jpg" alt="Michelle" /></div><div><b>Michelle</b><small>AI receptionist · online</small></div><button class="x" aria-label="Close chat" onclick="toggleMichelle()">×</button></div>
+  <div class="top">
+    <div class="av"><img src="assets/brand/sam-photo.jpg" alt="Michelle" /></div>
+    <div><b>Michelle</b><small>AI assistant · online</small></div>
+    <button class="x" aria-label="Close chat" onclick="toggleMichelle()">×</button>
+  </div>
   <div id="sam-msgs"></div>
   <div class="qr" id="sam-qr"></div>
   <form class="sam-input" onsubmit="samType(event)">
@@ -653,14 +780,12 @@
 
 <script src="assets/posts.js"></script>
 <script>
-/* ════════════════════════════════════════════════════════════════
-   1) YOUR CONTACT DETAILS — edit the X's (updates the whole site)
-   ════════════════════════════════════════════════════════════════ */
+/* ══ CONTACT DETAILS ══ */
 const BIZ = {
-  whatsapp: "27613590046",                          // main business WhatsApp (0613590046)
-  phone:    "+27612017287",                         // calls / phone (0612017287)
-  email:    "info@aplusbrandingtechnologies.com",  // email — change if you use a different address
-  gbp:      "https://share.google/vMiDCUCj3IaCJYwOH" // Google Business Profile
+  whatsapp: "27613590046",
+  phone:    "+27612017287",
+  email:    "info@aplusbrandingtechnologies.com",
+  gbp:      "https://share.google/vMiDCUCj3IaCJYwOH"
 };
 
 /* ════════════════════════════════════════════════════════════════
@@ -724,111 +849,62 @@ const SITE = {
 };
 /* ════════════════════════════════════════════════════════════════ */
 
+/* ══ SETUP ══ */
 document.getElementById('yr').textContent = new Date().getFullYear();
 
-/* ---- contact links ---- */
-function waLink(msg){ const b="https://wa.me/"+BIZ.whatsapp; return msg ? b+"?text="+encodeURIComponent(msg) : b; }
+function waLink(msg){ const b="https://wa.me/"+BIZ.whatsapp; return msg?b+"?text="+encodeURIComponent(msg):b; }
 document.querySelectorAll('[data-wa]').forEach(el=>{ el.href=waLink(el.dataset.waMsg||""); el.target="_blank"; el.rel="noopener"; });
 document.querySelectorAll('[data-email]').forEach(el=>el.href="mailto:"+BIZ.email);
 document.querySelectorAll('[data-tel]').forEach(el=>el.href="tel:"+BIZ.phone);
 document.querySelectorAll('[data-gbp]').forEach(el=>el.href=BIZ.gbp);
-document.querySelectorAll('nav.links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav.links').classList.remove('open')));
+document.querySelectorAll('nav.links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav-links').classList.remove('open')));
 
-/* ---- hero emblem ---- */
-if(SITE.heroEmblem){ document.getElementById('hero-emblem').src=SITE.heroEmblem; }
-else { document.querySelector('.hero-visual').style.display='none'; }
+/* ── Sticky nav scroll ── */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>20),{passive:true});
 
-/* ---- brand logo ---- */
-if(SITE.brandLogo){
-  const img=document.getElementById('brand-img');
-  img.src=SITE.brandLogo;
-  img.onload=()=>{ img.style.display="block"; document.getElementById('brand-mark').style.display="none"; document.getElementById('brand-name').style.display="none"; };
-}
-
-/* ---- HERO carousel ---- */
-const slidesEl=document.getElementById('slides');
-const contentEl=document.getElementById('hero-content');
-const dotsEl=document.getElementById('dots');
-const S=SITE.heroSlides; let cur=0, timer=null;
-const DUR=6000;
-const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-S.forEach((s,i)=>{
-  const sl=document.createElement('div'); sl.className="slide"+(i===0?" active":"");
-  const veil="veil "+(s.veil||"g1");
-  sl.innerHTML = (s.image?`<div class="bgimg" style="background-image:url('${s.image}')"></div>`:"") + `<div class="${veil}"></div>`;
-  slidesEl.appendChild(sl);
-
-  const d=document.createElement('button'); d.setAttribute('aria-label','Slide '+(i+1)); if(i===0)d.className="on";
-  d.innerHTML='<span class="fill"></span>'; d.onclick=()=>go(i,true); dotsEl.appendChild(d);
-});
-function renderContent(i){
-  const s=S[i];
-  contentEl.innerHTML=`<div class="slide-content show">
-    <span class="kicker">${s.kicker}</span>
-    <h1>${s.title}</h1>
-    <p class="lead">${s.text}</p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="${waLink(s.ctaMsg)}" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.821 11.821 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.788-.99z"/></svg>
-        ${s.cta}</a>
-      <a class="btn btn-ghost" href="#work">See our work</a>
-    </div></div>`;
-}
-function setDot(i){
-  [...dotsEl.children].forEach((d,k)=>{
-    d.className = k===i ? "on":"";
-    const f=d.querySelector('.fill'); f.classList.remove('run'); void f.offsetWidth;
-    if(k===i && !reduce){ d.style.setProperty('--dur',DUR+'ms'); f.classList.add('run'); }
-  });
-}
-function go(i,manual){
-  cur=(i+S.length)%S.length;
-  [...slidesEl.children].forEach((sl,k)=>sl.classList.toggle('active',k===cur));
-  renderContent(cur); setDot(cur);
-  if(manual) restart();
-}
-function next(){ go(cur+1); } function prev(){ go(cur-1); }
-function restart(){ if(reduce)return; clearInterval(timer); timer=setInterval(next,DUR); }
-document.getElementById('next').onclick=()=>go(cur+1,true);
-document.getElementById('prev').onclick=()=>go(cur-1,true);
-document.querySelector('.hero').addEventListener('mouseenter',()=>clearInterval(timer));
-document.querySelector('.hero').addEventListener('mouseleave',restart);
-/* touch swipe */
-let tx=0; const hero=document.querySelector('.hero');
-hero.addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
-hero.addEventListener('touchend',e=>{ const dx=e.changedTouches[0].clientX-tx; if(Math.abs(dx)>50){ dx<0?go(cur+1,true):go(cur-1,true);} },{passive:true});
-renderContent(0); setDot(0); restart();
-
-/* ---- LOGO marquee (duplicated for seamless loop) ---- */
-const lt=document.getElementById('logo-track');
-function logoEl(l){
-  const a=document.createElement('div'); a.className="logo-chip";
-  if(l.image){ const im=new Image(); im.src=l.image; im.alt=l.name; im.onerror=()=>{a.textContent=l.name;}; a.appendChild(im); }
-  else a.textContent=l.name;
-  return a;
-}
-[...SITE.logos, ...SITE.logos].forEach(l=>lt.appendChild(logoEl(l)));
-
-/* ---- PORTFOLIO ---- */
-const pf=document.getElementById('portfolio');
-SITE.portfolio.forEach(p=>{
-  const tag=document.createElement(p.url?'a':'div'); tag.className="port rv";
-  if(p.url){ tag.href=p.url; tag.target="_blank"; tag.rel="noopener"; }
-  const ph = p.image ? `style="background-image:url('${p.image}')" class="ph"` : `class="ph fallback"`;
-  tag.innerHTML=`<div ${ph}></div><div class="ov"><div class="tag">${p.tag}</div><h4>${p.title}</h4>${p.url?'<div class="go">View site →</div>':''}</div>`;
-  pf.appendChild(tag);
+/* ── Logo marquee ── */
+const lt = document.getElementById('logo-track');
+[...LOGOS,...LOGOS].forEach(l=>{
+  const el = document.createElement('div'); el.className='client-chip'; el.textContent=l.name; lt.appendChild(el);
 });
 
-/* ---- BLOG teaser (newest 3 from assets/posts.js) ---- */
-function fmtDate(s){ try{ return new Date(s).toLocaleDateString('en-ZA',{day:'numeric',month:'short',year:'numeric'}); }catch(e){ return s; } }
-const bl=document.getElementById('blog-list');
-if(bl && window.POSTS){
-  window.POSTS.slice(0,3).forEach(b=>{
-    const a=document.createElement('a'); a.className="blogcard rv"; a.href=b.url;
-    a.innerHTML=`<div class="bc-tag">${b.tag} · ${fmtDate(b.date)}</div><h4>${b.title}</h4><p>${b.excerpt}</p><span class="bc-go">Read more →</span>`;
-    bl.appendChild(a);
-  });
+/* ── Portfolio ── */
+const pf = document.getElementById('portfolio');
+PROJECTS.forEach(p=>{
+  const el = document.createElement(p.url?'a':'div');
+  el.className = 'project-card rv';
+  if(p.url){ el.href=p.url; el.target='_blank'; el.rel='noopener'; }
+  const imgSrc = p.image || p.fallback;
+  el.innerHTML = `
+    <div class="proj-img">
+      <img src="${imgSrc}" alt="${p.title}" loading="lazy" onerror="this.src='${p.fallback}'" />
+      <span class="proj-tag">${p.tag}</span>
+    </div>
+    <div class="proj-body">
+      ${p.concept?'<span class="concept-badge">Concept Project</span>':''}
+      <h3>${p.title}</h3>
+      <div class="pso-row">
+        <div class="pso-item"><div class="pso-lbl">Problem</div><div class="pso-val">${p.problem}</div></div>
+        <div class="pso-item"><div class="pso-lbl">Solution</div><div class="pso-val">${p.solution}</div></div>
+        <div class="pso-item"><div class="pso-lbl">Outcome</div><div class="pso-val">${p.outcome}</div></div>
+      </div>
+      ${p.cta
+        ? '<a class="proj-link" href="#contact">Start your project →</a>'
+        : p.url
+          ? '<span class="proj-link">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>'
+          : ''
+      }
+    </div>`;
+  pf.appendChild(el);
+});
+
+/* ── FAQ accordion ── */
+function toggleFaq(btn){
+  const ans = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q.open').forEach(b=>{ b.classList.remove('open'); b.nextElementSibling.classList.remove('open'); });
+  if(!isOpen){ btn.classList.add('open'); ans.classList.add('open'); }
 }
 
 /* ---- FAQ accordion ---- */
@@ -838,18 +914,20 @@ document.querySelectorAll('.faq-q').forEach(b=>b.addEventListener('click',()=>b.
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4*60)+'ms';io.observe(el);});
 
-/* ---- SAM chat widget (connected to the A-Plus AI agent on n8n) ---- */
-const SAM_WEBHOOK="/api/chat";
-const panel=document.getElementById('sam-panel'),msgs=document.getElementById('sam-msgs'),qrBox=document.getElementById('sam-qr');
+/* ══ MICHELLE CHAT ══ */
+const SAM_WEBHOOK = "/api/chat";
+const panel = document.getElementById('sam-panel');
+const msgs = document.getElementById('sam-msgs');
+const qrBox = document.getElementById('sam-qr');
 let samStarted=false, samHistory=[], samBusy=false;
-const QUICK=[["I want a website"],["Tell me about the AI receptionist"],["What does it cost?"],["Book a free demo"]];
+const QUICK = [["How does the AI receptionist work?"],["What does it cost?"],["I want a website"],["Book a discovery call"]];
 function toggleMichelle(){ panel.classList.contains('open')?panel.classList.remove('open'):openMichelle(); }
-function openMichelle(){ var t=document.getElementById('sam-teaser'); if(t)t.classList.remove('show'); panel.classList.add('open'); if(!samStarted){samStarted=true; bot("Hi! 👋 I'm Michelle from A-Plus. What can I help your business with today?"); renderQuick();} }
+function openMichelle(){ const t=document.getElementById('sam-teaser');if(t)t.classList.remove('show');panel.classList.add('open');if(!samStarted){samStarted=true;bot("Hi! 👋 I'm Michelle from A-Plus. I help businesses save time with AI. What can I help you with today?");renderQuick();} }
 function down(){ msgs.scrollTop=msgs.scrollHeight; }
 function bot(t){ const d=document.createElement('div');d.className='bub bot';d.textContent=t;msgs.appendChild(d);down();return d; }
 function user(t){ const d=document.createElement('div');d.className='bub user';d.textContent=t;msgs.appendChild(d);down(); }
-function waBtn(m){ const a=document.createElement('a');a.className='btn btn-primary';a.style.cssText='font-size:14px;padding:11px 18px';a.textContent='Continue on WhatsApp →';a.href=waLink(m);a.target='_blank';a.rel='noopener';msgs.appendChild(a);down(); }
-function renderQuick(){ qrBox.innerHTML=''; QUICK.forEach(([l])=>{const b=document.createElement('button');b.textContent=l;b.onclick=()=>sendToMichelle(l);qrBox.appendChild(b);}); }
+function waBtn(m){ const a=document.createElement('a');a.className='btn btn-primary';a.style.cssText='font-size:13px;padding:10px 16px;margin-top:4px';a.textContent='Continue on WhatsApp →';a.href=waLink(m);a.target='_blank';a.rel='noopener';msgs.appendChild(a);down(); }
+function renderQuick(){ qrBox.innerHTML='';QUICK.forEach(([l])=>{const b=document.createElement('button');b.textContent=l;b.onclick=()=>sendToMichelle(l);qrBox.appendChild(b);}); }
 async function sendToMichelle(text){
   if(samBusy) return; samBusy=true; qrBox.innerHTML=''; user(text);
   const typing=bot("Michelle is typing…");
@@ -858,20 +936,19 @@ async function sendToMichelle(text){
     const data=await res.json().catch(()=>null);
     const reply=data&&(data.reply||data.message||data.output||data.text);
     typing.remove();
-    if(reply){ bot(reply); samHistory.push({role:"user",content:text}); samHistory.push({role:"assistant",content:reply}); }
-    else { bot("Thanks! Tap below and the A-Plus team will help you on WhatsApp."); waBtn("Hi A-Plus, "+text); }
+    if(reply){bot(reply);samHistory.push({role:"user",content:text});samHistory.push({role:"assistant",content:reply});}
+    else{bot("Thanks! The A-Plus team will help you on WhatsApp.");waBtn("Hi A-Plus, "+text);}
   }catch(e){
     typing.remove();
-    bot("I'm having a moment connecting 😅 Tap below to chat with the team on WhatsApp — we'll help you right away."); waBtn("Hi A-Plus, "+text);
+    bot("I'm having a moment connecting 😅 Chat with the team on WhatsApp — we'll help you right away.");waBtn("Hi A-Plus, "+text);
   }
   samBusy=false; renderQuick();
 }
-function samType(e){ e.preventDefault(); const inp=document.getElementById('sam-in'),txt=inp.value.trim(); if(!txt)return; inp.value=''; sendToMichelle(txt); }
-/* Proactive greeting: small teaser bubble 4s after arrival, once per visit */
-function showTeaser(){ const t=document.getElementById('sam-teaser'); if(t&&!samStarted)t.classList.add('show'); }
-function hideTeaser(){ const t=document.getElementById('sam-teaser'); if(t)t.classList.remove('show'); sessionStorage.setItem('samGreeted','1'); }
-function openMichelleFromTeaser(){ hideTeaser(); openMichelle(); }
-if(!sessionStorage.getItem('samGreeted')){ setTimeout(showTeaser, 4000); }
+function samType(e){ e.preventDefault();const inp=document.getElementById('sam-in'),txt=inp.value.trim();if(!txt)return;inp.value='';sendToMichelle(txt); }
+function showTeaser(){ const t=document.getElementById('sam-teaser');if(t&&!samStarted)t.classList.add('show'); }
+function hideTeaser(){ const t=document.getElementById('sam-teaser');if(t)t.classList.remove('show');sessionStorage.setItem('samGreeted','1'); }
+function openMichelleFromTeaser(){ hideTeaser();openMichelle(); }
+if(!sessionStorage.getItem('samGreeted')){ setTimeout(showTeaser,5000); }
 </script>
 </body>
 </html>
